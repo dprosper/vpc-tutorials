@@ -1,0 +1,127 @@
+{
+    "products": [
+        {
+            "flavors": [
+                {
+                    "architecture": {
+                        "diagrams": [
+                            {
+                                "description": "This is a place holder diagram.  Please create one.",
+                                "diagram": {
+                                    "caption": "Place holder",
+                                    "url": "https://raw.githubusercontent.com/dprosper/vpc-tutorials/migration-1.0.0-1707403515/architecture-diagram-placeholder.drawio.svg"
+                                }
+                            }
+                        ],
+                        "features": [
+                            {
+                                "description": "edit me to suit your needs",
+                                "title": "Sample feature"
+                            }
+                        ]
+                    },
+                    "compliance": {},
+                    "configuration": [
+                        {
+                            "default_value": "",
+                            "description": "You IAM based API key.",
+                            "key": "ibmcloud_api_key",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "us-east",
+                            "description": "The VPC region to deploy the resources under.",
+                            "key": "vpc_region",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "dprosper-win",
+                            "description": "The names of SSH key used to access virtual server instances after creation.",
+                            "key": "vpc_ssh_key",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "solutions",
+                            "description": "The resource group for all the resources created (VPC and non VPC).",
+                            "key": "resource_group",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "",
+                            "description": "The file system location of private ssh key for virtual server instances access, i.e ~/.ssh/id_rsa and it needs to be a local file.",
+                            "key": "ssh_private_key_file",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "",
+                            "description": "The content of the private ssh key for virtual server instances access. Only use if the content of the private key is provided in the variable.",
+                            "key": "ssh_private_key_content",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "is",
+                            "description": "Prefix is added to all resources that are created by this template.",
+                            "key": "resources_prefix",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "cx2d-4x8",
+                            "description": "The profile for the application instance, increase the size based on environment need",
+                            "key": "vpc_app_image_profile",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "ibm-ubuntu-20-04-minimal-amd64-2",
+                            "description": "The scripts required for this configuration have only been validated on Ubuntu.",
+                            "key": "vpc_app_image_name",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "vsi-app-boot",
+                            "description": "The name for the boot volume of the app vsi.",
+                            "key": "boot_volume_name",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {
+                            "default_value": "true",
+                            "description": "True or False to delete the boot volume on VSI delete.",
+                            "key": "boot_volume_auto_delete",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "iam_permissions": [],
+                    "install_type": "fullstack",
+                    "label": "Standard",
+                    "name": "standard",
+                    "working_directory": "./"
+                }
+            ],
+            "keywords": [
+                "terraform"
+            ],
+            "label": "Migrated workspace-to-project-v1",
+            "long_description": "Detailed description to show at consumption",
+            "name": "migrated_workspace_to_project_v1",
+            "offering_docs_url": "",
+            "offering_icon_url": "",
+            "product_kind": "solution",
+            "short_description": "Summary description to show on catalog tile",
+            "support_details": "Your support statement",
+            "tags": [
+                "compute",
+                "terraform"
+            ]
+        }
+    ]
+}
